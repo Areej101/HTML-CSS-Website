@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Marketing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!--stylesheet-->
     <link rel="stylesheet" href="style.css">
@@ -13,10 +14,101 @@
 
     <!--@@@@@@@@@@@@@@@@@ Header Section @@@@@@@@@@@@@@@-->
     <header class="container-fluid">
-        <h1>Navigation</h1>
+        <nav id="nav" class="flex font-poppins">
+            <div class="nav-brand">
+                <a href="#" class="text-dark text-lg font-bold">Digital</a>
+            </div>
 
+            <div class="toggle-btn">
+                <button class="btn">
+                    <i class="bi bi-filter-right"></i>
+                </button>
+            </div>
+
+            <div class="collapse flex-grow">
+                <ul class="flex">
+                    <li>
+                        <a href="#" class="link">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">About</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">Services</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">Work</a>
+                    </li>
+                    <li>
+                        <a href="#" class="link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex-initial">
+                <ul class="flex">
+                    <button class="btn btn-primary btn-shadow bg-gradient text-white text-uppercase">Start a Project</button>
+                </ul>
+            </div>
+        </nav>
     </header>
     
+    <!--@@@@@@@@@@@@@@@@@ Main Section @@@@@@@@@@@@@@@-->
+    <main id="site-main">
+        <!-----banner area-->
+        <section class="banner-area font-poppins">
+            <div class="container mx-auto banner-title">
+                <div class="title">
+                    <span class="d-inline bn btn-primary bg-gradient-peach text-red">Digital Experience</span>
+                    <div class="py-2 branding text-dark text-lg sm-text-xl font-bold">
+                        <span class="d-block">Branding Digital</span>
+                        <span class="d-block">Marketing and</span>
+                        <span class="d-block">business solutions</span>
+                    </div>
+                    <div class="py-5">
+                        <p class="text-gray">We merge imagination and technology to help thousands of</p>
+                        <p class="text-gray">brands grow in an age of digital transformation.</p>
+                    </div>
+
+                    <div class="py-5">
+                        <a href="#" class="btn btn-primary bg-gradient text-white btn-shadow">Work Together</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-----/banner area-->
+
+
+        <!-----agency area-->
+        <section class="agency-area">
+            <div class="container mx-auto text-center font-poppins">
+                <span class="text-red">Join our agency</span>
+                <div class="area-title">
+                    <h1 class="text-lg text-dark">
+                        We desig and build beautiful digital<br>
+                        products that make a difference
+                    </h1>
+                </div>
+                <div class="grid cols-1 lg-cols-3">
+                    <div class="grid-item bg-gradient">col 1</div>
+                    <div class="grid-item bg-gradient">col 2</div>
+                    <div class="grid-item bg-gradient">col 3</div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-----/agency area-->
+
+
+
+    </main>
 
 
 
