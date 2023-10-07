@@ -10,12 +10,13 @@
     --text-light: #f6f6f6;
     --text-dark: #1A3260;
     --text-dark2: #1A3760DA;
-    --text-red: #ff4d6d;
+    --text-red: #f98096;
     --box-shadow: 0px 0px 50px 0px rgb(0 0 0/10%);
-    --bg-blue:rgb(140, 204, 236);
-    --bg-red: rgb(240, 114, 127);
-    --bg-yellow: rgb(244, 244, 144);
-    --bg-purple:rgb(241, 139, 245);
+    --bg-blue:rgb(216, 237, 248);
+    --bg-red: rgb(248, 207, 211);
+    --bg-yellow: rgb(241, 241, 219);
+    --bg-purple:rgb(247, 224, 248);
+    --bg-green:rgb(216, 243, 222);
 
 
     /* font family */
@@ -24,7 +25,7 @@
     /* gradient colors */
     --bg-gradient: linear-gradient(to right, #ff512f, #dd2476);
     --bg-gradient-indigo: linear-gradient(to right, #8e2de2, #631fea);
-    --bg-gradient-peach: linear-gradient(to right, #f6b290, #fff7f3);
+    --bg-gradient-peach: linear-gradient(to right, #f0c5b0, #fff7f3);
 
     /* images */
     --bg-cover: url('./assets/bgimg1.png');
@@ -89,6 +90,9 @@ ul{
 }
 .bg-gradient-purple{
     background: var(--bg-purple);
+}
+.bg-gradient-green{
+    background: var(--bg-green);
 }
 
 .font-poppins{
@@ -222,11 +226,13 @@ ul{
 .w-50{
     width: 50%;
 }
-
+.btn-shadow{
+    box-shadow: var(--box-shadow);
+}
 /* -------------------global classes----------- */
 
 /* ------------------Media Query ------------------- */
-/* for large screen sm(640px) ---equal or greater han 640px*/
+/* for small screen sm(640px) ---equal or greater han 640px*/
  @media (min-width:640px){
     .container{
         max-width: 640px;
@@ -234,12 +240,25 @@ ul{
     .sm-text-xl{
         font-size: 3em;
     }
+    .sm-px-10{
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+    }
 
  }
- /* for large screen md(768px) */
+ /* for medium screen md(768px) */
  @media (min-width:768px){
     .container{
         max-width: 768px;
+    }
+    .md-text-left{
+        text-align: left;
+    }
+    .md-mx-initial{
+        margin: initial;
+    }
+    .md-cols-2{
+        grid-template-columns: repeat(2,minmax(0,1fr));
     }
 
  }
@@ -268,9 +287,15 @@ ul{
     .lg-cols-3{
         grid-template-columns: repeat(3,minmax(0,1fr));
     }
+    .lg-cols-2{
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    .lg-cols-4{
+        grid-template-columns: repeat(4,minmax(0,1fr));
+    }
 
  }
- /* for large screen xl(1280px) */
+ /* for extra large screen xl(1280px) */
  @media (min-width:1280px){
 
     .container{
@@ -283,10 +308,7 @@ ul{
     #nav .flex-initial ul button{
         display: inline-block !important;
     }
-
  }
-
-
 /* ------------------/Media Query ------------------- */
 
 
@@ -348,13 +370,161 @@ ul{
 #site-main .banner-area .banner-title{
     padding-top: 10rem;
     padding-left: 5%;
-    height: 95vh;
-    
+    height: 95vh;  
+}
+/* ----------/Banner area -------------- */
+
+/* ----------Agency area -------------- */
+#site-main .agency-area{
+    padding: 5em 0;
+}
+/* ----------/Agency area -------------- */
+
+
+/* ----------/Digital life area -------------- */
+#site-main .life-area > .grid{
+    column-gap: 10em;
+}
+#site-main .life-area .grid-images{
+    display: grid;
+    grid-template-columns: repeat(16,minmax(10px,1fr));
+    grid-template-rows: repeat(8,minmax(100px,1fr));
+}
+#site-main .life-area .grid-images .item-one{
+    background: var(--text-gray);
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    background: var(--bg-image1) no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    filter: blur(1px);
+}
+#site-main .life-area .grid-images .item-two{
+    background: var(--text-gray);
+    grid-column-start: 9;
+    grid-column-end: 16;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background: var(--bg-image2) no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    filter: blur(1px);
+}
+#site-main .life-area .grid-images .item-three{
+    grid-area: 3/4/ 8/14;
+    background: var(--bg-image3) no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+    z-index: 99;
+}
+/* ----------/Digital life  area -------------- */
+
+/* ----------Counting  area -------------- */
+#site-main .counting-area{
+    padding: 7em 0;
+}
+#site-main .counting-area .grid-one{
+    width: 80%;
+}
+#site-main .counting-area .count-box{
+    display: flex;
+    justify-content: center;
+    margin: 2em 0;
+}
+
+#site-main .counting-area .count-box .grid{
+    display:inline-grid;
+    grid-gap: 2px;
+    border-radius: 20px;
+    background-color: var(--text-light);
+    box-shadow: var(--box-shadow);
+}
+
+#site-main .counting-area .count-box .grid > div{
+    background-color: white;
+    padding: 2em 2.5em;
+    text-align: center;
+}
+/* ----------/Counting  area -------------- */
+
+/* ----------Card  area -------------- */
+#site-main .card-area .grid{
+    column-gap: 4em;
+    row-gap: 2em;
+}
+/* ----------/Card  area -------------- */
+
+/* ----------/Recent work area -------------- */
+#site-main .recent-work-area .images-flex .flex-item{
+    width: 360px;
+    margin-bottom: 50px;
+}
+#site-main .recent-work-area .images-flex .flex-item img{
+    border-radius: 10px;
 }
 
 
+/* ----------/Recent work  area -------------- */
 
-/* ----------/Banner area -------------- */
+/* ----------Card area styling  area -------------- */
+#site-main .articles-area .grid{
+    column-gap: 5em;
+}
+#site-main .articles-area .card article{
+    border-radius: 10px;
+}
+
+/* ----------/Card area syling area -------------- */
+
+/* ----------Ready  area -------------- */
+#site-main .ready-area .flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* ----------/Ready  area -------------- */
+
+
+/* ----------Footer-------------- */
+#footer{
+    border-top: 2px solid var(--text-light);
+    margin-top: 8em;
+}
+#footer .grid{
+    column-gap: 3em;
+    padding: 6em 0;
+    border-bottom: 2px solid var(--text-light);
+}
+#footer .grid input.subscribe-text{
+    border: none;
+    background-color: var(--text-light);
+    padding: 1em;
+    font-size:1em;
+    color: var(--text-dark2);
+    font-family: var(--font-poppins);
+}
+#footer .grid input.subscribe-text:focus{
+    border: none;
+    outline: none;
+}
+#footer .grid button.btn-go{
+    background-color: var(--text-light);
+    padding: 0 2em;
+    font-family: var(--font-poppins);
+}
+#footer .grid button.btn-go:hover{
+    background-color: var(--text-dark);
+    color: var(--text-white);
+
+}
+/* ----------/Footer -------------- */
+
+
+
+
+
 
 
 
